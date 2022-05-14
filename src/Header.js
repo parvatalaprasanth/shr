@@ -3,25 +3,22 @@ import './Header.css';
 import { GoSearch } from 'react-icons/go';
 import { BsFillBasket2Fill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+
 
 // import SearchIcon from '@mui/icons-material/Search';
 function Header() {
-  const history = useHistory()
-  const gotocheckout=() =>{
-    console.log("working")
-    history.push("/")
-  }
+
+  
   return (
     <div className="header">
       
-      <div onClick={gotocheckout}>
+      <Link to="/checkout">
      
         <img
           className="header_logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt=""
         />
-       </div> 
+       </Link>
        
        <div className ="header_search">
       <input className="header_searchInput" type="text"/>
